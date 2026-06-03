@@ -19,7 +19,7 @@ An MCP (Model Context Protocol) server that gives Claude real-time access to AI 
   "mcpServers": {
     "ai-knowledge-mcp": {
       "command": "node",
-      "args": ["/YOUR/PATH/TO/server.js"]
+      "args": ["/YOUR/PATH/TO/server-local.js"]
     }
   }
 }
