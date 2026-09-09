@@ -20,11 +20,14 @@ server.tool(
     const xml = await response.text();
     const entries = xml.match(/<entry>([\s\S]*?)<\/entry>/g) || [];
     const papers = entries.map(entry => {
-      const title = entry.match(/<title>([\s\S]*?)<\/title>/)?.[1]?.trim() || "No title";
+    const title = entry.match(/<title>([\s\S]*?)<\/title>/)?.[1]?.trim() || "No title";
+    const authors = [...entry.matchAll(/<name>([\s\S]*?)<\/name>/g)]
+    .map(match => match[1].trim())
+    .join(", ") || "Unknown";
       const summary = entry.match(/<summary>([\s\S]*?)<\/summary>/)?.[1]?.trim() || "No summary";
       const published = entry.match(/<published>(.*?)<\/published>/)?.[1]?.trim() || "Unknown";
       const link = entry.match(/<id>(.*?)<\/id>/)?.[1]?.trim() || "";
-      return `Title: ${title}\nPublished: ${published}\nLink: ${link}\nSummary: ${summary}`;
+      return `Title: ${title}\nAuthors: ${authors}\nPublished: ${published}\nLink: ${link}\nSummary: ${summary}`;
     }).join("\n\n---\n\n");
     return { content: [{ type: "text", text: papers || "No papers found." }] };
   }
