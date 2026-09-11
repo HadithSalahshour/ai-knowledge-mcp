@@ -1,12 +1,12 @@
 {
   "name": "ai-knowledge-mcp",
   "version": "1.0.0",
-  "description": "",
+  "description": "MCP server providing live AI research from arXiv and Hacker News",
   "main": "index.js",
   "scripts": {
   "start": "node server.js"
 },
-  "keywords": [],
+  "keywords": ["mcp", "ai-research", "arxiv", "hacker-news"],
   "author": "",
   "license": "ISC",
   "type": "module",
