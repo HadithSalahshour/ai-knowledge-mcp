@@ -2,17 +2,18 @@
   "name": "ai-knowledge-mcp",
   "version": "1.0.0",
   "description": "MCP server providing live AI research from arXiv and Hacker News",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-  "start": "node server.js"
-},
+    "start": "node server.js",
+    "check": "node --check server.js && node --check server-local.js"
+  },
   "keywords": ["mcp", "ai-research", "arxiv", "hacker-news"],
   "author": "",
   "license": "ISC",
   "type": "module",
   "engines": {
-  "node": ">=18"
-},
+    "node": ">=18"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
     "express": "^5.2.1",
