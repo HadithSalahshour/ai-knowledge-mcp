@@ -5,9 +5,15 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "start:local": "node server-local.js",
     "check": "node --check server.js && node --check server-local.js"
   },
-  "keywords": ["mcp", "ai-research", "arxiv", "hacker-news"],
+  "keywords": [
+    "mcp",
+    "ai-research",
+    "arxiv",
+    "hacker-news"
+  ],
   "author": "",
   "license": "ISC",
   "type": "module",
