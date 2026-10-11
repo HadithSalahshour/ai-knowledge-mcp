@@ -60,13 +60,19 @@ The project provides two entry points:
 - **`server-local.js`** — Uses the stdio transport required for local Claude Desktop integration.
 - **`server.js`** — Uses HTTP transport and exposes the MCP endpoint at `/mcp`.
 
+Start the local stdio server with:
+
+```bash
+npm run start:local
+```
+
 Start the HTTP server with:
 
 ```bash
 npm start
 ```
 
-It runs on port `3000` by default. Set the `PORT` environment variable to use a different port.
+The HTTP server runs on port `3000` by default. Set the `PORT` environment variable to use a different port.
 
 ## External data sources
 
@@ -76,6 +82,14 @@ The server makes outbound requests to:
 - [Hacker News](https://news.ycombinator.com/) for engineering discussions
 
 Results depend on the availability and content of these external services.
+
+## Validation
+
+Check both server files for JavaScript syntax errors:
+
+```bash
+npm run check
+```
 
 ## Built with
 
