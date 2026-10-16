@@ -241,5 +241,3 @@ app.post("/mcp", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT);
-const PORT = process.env.PORT || 3000;
-app.listen(PORT);
