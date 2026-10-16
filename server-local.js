@@ -222,6 +222,3 @@ server.tool("daily_ai_digest", {}, async () => {
 
 const transport = new StdioServerTransport();
 await server.connect(transport);
-
-const transport = new StdioServerTransport();
-await server.connect(transport);
