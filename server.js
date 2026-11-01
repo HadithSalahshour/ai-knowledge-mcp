@@ -15,7 +15,12 @@ function createServer() {
   server.tool(
     "get_ai_papers",
     {
-      topic: z.string().describe("Topic to search for"),
+      topic: z
+        .string()
+        .trim()
+        .min(2, "Topic must contain at least 2 characters")
+        .max(100, "Topic must contain at most 100 characters")
+        .describe("Topic to search for"),
       max_results: z
         .number()
         .int()
